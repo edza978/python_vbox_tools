@@ -1,0 +1,75 @@
+Port forwarding to VM from Host:
+vboxmanage modifyvm VM --natpf1 "ssh,tcp,192.168.28.50,2223,,22"
+#  [--natpf<1-N> [<rulename>],tcp|udp,[<hostip>],<hostport>,[<guestip>],<guestport>]
+
+Create HostOnly Interface:
+vboxmanage hostonlyif create ipconfig vboxnet0 --ip 192.168.56.1
+
+Show running VMs:
+vboxmanage list runningvms
+
+Poweroff VM
+vboxmanage controlvm VM poweroff
+
+Remove VM:
+vboxmanage unregistervm VM --delete
+
+Rename VM:
+vboxmanage modifyvm ORIGNAL_NAME --name NEW_NAME
+
+Create VM for Ubuntu 64 bits:
+vboxmanage createvm --name test --ostype Ubuntu_64 --register
+
+Connect HostOnly IF to VM
+vboxmanage modifyvm test --nic2 hostonly --hostonlyadapter2 vboxnet0
+
+Remove HostOnly IF to VM
+vboxmanage modifyvm test --nic2 hostonly none
+
+Configure VM 1 core 1GB RAM
+vboxmanage modifyvm test --memory 1024 --cpus 1
+
+Configure boot order and enable BIOS Boot menu:
+vboxmanage modifyvm test --boot1 dvd --boot2 disk --boot3 net --biosbootmenu messageandmenu
+
+Create VDI (Virtual HDD)  of 8GB:
+vboxmanage createhd --filename test.vdi --size 8192
+
+Create Storage controller (SATA) for a VM:
+vboxmanage storagectl test --name sata0 --add sata --bootable on --sataportcount 2
+
+Attach VDI to VM in SATA mode:
+vboxmanage storageattach test --storagectl sata0 --device 0 --port 0 --type hdd --medium Vdis/test.vdi
+
+Create Storage controller (IDE) for a VM:
+vboxmanage storagectl test --name ide0 --add ide --bootable on
+
+Attach ISO to VM in IDE mode:
+vboxmanage storageattach test --storagectl ide0 --port 0 --device 1 --type dvddrive --medium ISOs/ubuntu-14.04.2-server-amd64.iso
+
+Remove a medium from VM:
+vboxmanage storagectl test --name ide0 --remove
+
+Start VM without GUI:
+vboxmanage startvm test --type headless
+
+Configure VRDE (Remote desktop) in VM (Default port is 3389):
+vboxmanage modifyvm test --vrde on --vrdeport 5050
+
+Connect to VM's remote desktop (If you're in Windows it's required setup xming [http://sourceforge.net/projects/xming]  first):
+rdesktop-vrdp localhost:5050 -N
+
+
+-------------------------------------
+or from command line
+
+VBoxManage modifyvm myserver --natpf1 "ssh,tcp,,3022,,22"
+where 'myserver' is the name of the created VM. Check the added rules:
+
+VBoxManage showvminfo myserver | grep 'Rule'
+That's all! Please be sure you don't forget to install an SSH server:
+
+sudo apt-get install openssh-server
+To SSH into the guest VM, write:
+
+ssh -p 3022 user@127.0.0.1
