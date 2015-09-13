@@ -14,8 +14,8 @@ optional arguments:
 
 Required/Requerido:
   name                  VM Name/Nombre
-  ostype                VM's OS Type / Tipo de sistema operativo (list/lista:
-                        vboxmanage list ostypes)
+  ostype                VM's OS Type / Tipo de sistema operativo
+                        (list/lista: vboxmanage list ostypes)
   ram                   VM's RAM (MBs)/Cantidad de RAM
 
 Others/Otros:
@@ -23,13 +23,13 @@ Others/Otros:
                         VM's Cores / Cantidad n├║cleos
   -hi HI, --hostonly-if HI
                         HostOnly IF's name / Nombre interface HostOnly.
-                        (list/lista: vboxmanage list hostonlyifs
+                        (list/lista: vboxmanage list hostonlyifs)
   -sata, --sata         Create SATA bus / Crear bus SATA. Default: True
   -ide, --ide           Create IDE bus / Crear bus IDE. Default: True
 
 Remote Access/Acceso Remoto:
-  -vrde, --enable-vrde  Allow remote desktop to this VM / Permitir escritorio
-                        remoto a esta VM. Default: False
+  -vrde, --enable-vrde  Allow remote desktop to this VM / Permitir
+                        escritorio remoto a esta VM. Default: False
   -vp VP, --vrde-port VP
                         VRDE Port for this VM / Puerto para VRDE a esta VM.
                         Default: 3389
@@ -42,9 +42,9 @@ Extra files/ Archivos extra:
   -hds HDD, --hdd-size HDD
                         VM's HDD size (MBs)/ Espacio en Disco
   -vdi VDI, --hdd-vdi VDI
-                        VM VDI file (If not defined, will be created with same
-                        name than VM) / Archivo VDI (Si no se especifica, se
-                        crear├í uno con el mismo nombre de la VM.
+                        VM VDI file (If not defined, will be created with
+                        same name than VM) / Archivo VDI (Si no se especifica,
+                        se creara uno con el mismo nombre de la VM).
 ```
 ### Examples
 
