@@ -24,7 +24,7 @@ def createVM(args):
         cmds["cmd03"]=['vboxmanage','modifyvm',args.name,'--memory',str(args.ram)]
 
     if(args.sata):
-        cmds["cmd04"]=['vboxmanage','storagectl',args.name,'--name','sata0','--add','sata','--bootable','on','--sataportcount','2']
+        cmds["cmd04"]=['vboxmanage','storagectl',args.name,'--name','sata0','--add','sata','--bootable','on']
         sortcmds.append('cmd04')
     if(args.ide):
         cmds["cmd05"]=['vboxmanage','storagectl',args.name,'--name','ide0','--add','ide','--bootable','on']
@@ -86,7 +86,7 @@ grp2.add_argument('-sata', '--sata', action="store_true", default=True, dest="sa
 grp2.add_argument('-ide', '--ide', action="store_true", default=True, dest="ide", help="Create IDE bus / Crear bus IDE. Default: True")
 
 grp3=parser.add_argument_group('Remote Access/Acceso Remoto')
-grp3.add_argument('-vrde', '--enable-vrde', action="store_true", default=True, dest="vrde", help="Allow remote desktop to this VM / Permitir escritorio remoto a esta VM. Default: True")
+grp3.add_argument('-vrde', '--enable-vrde', action="store_true", default=False, dest="vrde", help="Allow remote desktop to this VM / Permitir escritorio remoto a esta VM. Default: False")
 grp3.add_argument('-vp', '--vrde-port', action="store", default='3389', type=int, dest="vp", help="VRDE Port for this VM / Puerto para VRDE a esta VM. Default: 3389")
 
 grp4=parser.add_argument_group('Extra files/ Archivos extra')
