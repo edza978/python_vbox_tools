@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for message in form.login.errors %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.password.errors %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+  {% endfor %}
+
+  {% for message in form.name.errors %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+  {% endfor %}
+
+<form class="form-horizontal" action="{{ url_for('createuser') }}" method=post>
+{{ form.hidden_tag() }}
+<fieldset>
+<!-- Form Name -->
+<legend>User creation form</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="login">{{ form.login.label }}</label>
+  <div class="col-md-4">
+  {% if form.login.data %}
+  <input id="login" name="login" type="text" placeholder="username" class="form-control input-md" required="" value={{ form.login.data }}>
+  {% else %}
+  <input id="login" name="login" type="text" placeholder="username" class="form-control input-md" required="">
+  {% endif %}
+  <span class="help-block">Username</span>
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">{{ form.password.label }}</label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" required="">
+    <span class="help-block">Password for this user</span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">{{ form.name.label }}</label>
+  <div class="col-md-4">
+  {% if form.login.data %}
+  <input id="name" name="name" type="text" placeholder="full name" class="form-control input-md" required="" value={{ form.login.data }}>
+  {% else %}
+  <input id="name" name="name" type="text" placeholder="full name" class="form-control input-md" required="">
+  {% endif %}
+  <span class="help-block">Full name of the user</span>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Create User</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">create user</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+{% endblock %}

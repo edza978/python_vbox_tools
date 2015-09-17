@@ -32,7 +32,7 @@ def createvm():
     #python createvm.py myvm Ubuntu_64 1024 -cpus 2 -hds 8192 -vdis $HOME/vdis -hi vboxnet0 -iso $HOME/ubuntu.iso
     print cmd
     res=subprocess.check_output(cmd)
-    html="<pre>%s</pre>" % res
+    html="%s" % res
     return(make_response(html))
 
 @app.route("/getmyip", methods=["GET"])
@@ -40,4 +40,4 @@ def getmyip():
     return jsonify({'ip': request.remote_addr}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5555)

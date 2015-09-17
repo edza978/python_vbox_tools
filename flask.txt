@@ -1,0 +1,12 @@
+# Flask
+pip install flask
+# Flask forms
+pip install flask-wtf
+# Flask SQLAlchemy DB ORM
+pip install flask-sqlalchemy
+# SQLAlchemy migration
+pip install sqlalchemy-migrate
+# Login manager
+pip install flask-login
+# OpenID
+pip install flask-openid

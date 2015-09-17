@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+  {% block content %}
+  {% macro render_bootstrap_field(field) %}
+    <div class="form-group {% if field.errors %} has-error {% endif %}">
+      <label class="col-md-4 control-label" for='{{ field.name }}'>
+        {{ field.label }}{% if field.flags %}{% if field.flags.required %} *{% endif %}{% endif %}
+      </label>
+      <div class="col-md-4">
+        {{ field(class='form-control input-md')|safe }}
+      </div>
+    </div>
+  {% endmacro %}
+
+  {% for message in form.name.errors %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+  {% endfor %}
+  <form class="form-horizontal" action="{{ url_for('createvm') }}" method=post>
+    {{ form.hidden_tag() }}
+    <fieldset>
+    <!-- Form Name -->
+      <legend>VM creation form</legend>
+      <div class="col-md-6">
+        {{ render_bootstrap_field(form.name) }}
+        {{ render_bootstrap_field(form.cores) }}
+        {{ render_bootstrap_field(form.ram) }}
+        {{ render_bootstrap_field(form.hds) }}
+      </div>
+      <div class="col-md-6">
+        {{ render_bootstrap_field(form.server) }}
+        {{ render_bootstrap_field(form.user) }}
+        {{ render_bootstrap_field(form.vmos) }}
+        {{ render_bootstrap_field(form.vrde) }}
+        {{ render_bootstrap_field(form.vp) }}
+      </div>
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-6 control-label" for="singlebutton">Create VM</label>
+        <div class="col-md-6">
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">create vm</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <br>
+  {% if  vms %}
+   <table class="table table-striped table-condensed table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Cores</th>
+        <th class="text-center">RAM</th>
+        <th class="text-center">VHDD Size</th>
+        <th class="text-center">VRDE</th>
+        <th class="text-center">VRDE Port</th>
+        <th class="text-center">Server</th>
+        <th class="text-center">Gues OS</th>
+        <th class="text-center">User</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in servers %}
+      <tr>
+       <td>{{ s[0] }}</td>
+       <td align="right">{{ s[1] }}</td>
+       <td align="right">{{ s[2] }}</td>
+       <td align="right">{{ s[3] }}</td>
+       <td>{{ s[4] }}</td>
+       <td align="right">{{ s[5] }}</td>
+       <td>{{ s[6] }}</td>
+       <td>{{ s[7] }}</td>
+       <td>{{ s[8] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+ {% endif  %}
+{% endblock %}

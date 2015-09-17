@@ -1,0 +1,260 @@
+ID:          Other
+Description: Other/Unknown
+
+ID:          Other_64
+Description: Other/Unknown (64-bit)
+
+ID:          Windows31
+Description: Windows 3.1
+
+ID:          Windows95
+Description: Windows 95
+
+ID:          Windows98
+Description: Windows 98
+
+ID:          WindowsMe
+Description: Windows ME
+
+ID:          WindowsNT4
+Description: Windows NT 4
+
+ID:          Windows2000
+Description: Windows 2000
+
+ID:          WindowsXP
+Description: Windows XP (32-bit)
+
+ID:          WindowsXP_64
+Description: Windows XP (64-bit)
+
+ID:          Windows2003
+Description: Windows 2003 (32-bit)
+
+ID:          Windows2003_64
+Description: Windows 2003 (64-bit)
+
+ID:          WindowsVista
+Description: Windows Vista (32-bit)
+
+ID:          WindowsVista_64
+Description: Windows Vista (64-bit)
+
+ID:          Windows2008
+Description: Windows 2008 (32-bit)
+
+ID:          Windows2008_64
+Description: Windows 2008 (64-bit)
+
+ID:          Windows7
+Description: Windows 7 (32-bit)
+
+ID:          Windows7_64
+Description: Windows 7 (64-bit)
+
+ID:          Windows8
+Description: Windows 8 (32-bit)
+
+ID:          Windows8_64
+Description: Windows 8 (64-bit)
+
+ID:          Windows81
+Description: Windows 8.1 (32-bit)
+
+ID:          Windows81_64
+Description: Windows 8.1 (64-bit)
+
+ID:          Windows2012_64
+Description: Windows 2012 (64-bit)
+
+ID:          Windows10
+Description: Windows 10 (32-bit)
+
+ID:          Windows10_64
+Description: Windows 10 (64-bit)
+
+ID:          WindowsNT
+Description: Other Windows (32-bit)
+
+ID:          WindowsNT_64
+Description: Other Windows (64-bit)
+
+ID:          Linux22
+Description: Linux 2.2
+
+ID:          Linux24
+Description: Linux 2.4 (32-bit)
+
+ID:          Linux24_64
+Description: Linux 2.4 (64-bit)
+
+ID:          Linux26
+Description: Linux 2.6 / 3.x / 4.x (32-bit)
+
+ID:          Linux26_64
+Description: Linux 2.6 / 3.x / 4.x (64-bit)
+
+ID:          ArchLinux
+Description: Arch Linux (32-bit)
+
+ID:          ArchLinux_64
+Description: Arch Linux (64-bit)
+
+ID:          Debian
+Description: Debian (32-bit)
+
+ID:          Debian_64
+Description: Debian (64-bit)
+
+ID:          OpenSUSE
+Description: openSUSE (32-bit)
+
+ID:          OpenSUSE_64
+Description: openSUSE (64-bit)
+
+ID:          Fedora
+Description: Fedora (32-bit)
+
+ID:          Fedora_64
+Description: Fedora (64-bit)
+
+ID:          Gentoo
+Description: Gentoo (32-bit)
+
+ID:          Gentoo_64
+Description: Gentoo (64-bit)
+
+ID:          Mandriva
+Description: Mandriva (32-bit)
+
+ID:          Mandriva_64
+Description: Mandriva (64-bit)
+
+ID:          RedHat
+Description: Red Hat (32-bit)
+
+ID:          RedHat_64
+Description: Red Hat (64-bit)
+
+ID:          Turbolinux
+Description: Turbolinux (32-bit)
+
+ID:          Turbolinux_64
+Description: Turbolinux (64-bit)
+
+ID:          Ubuntu
+Description: Ubuntu (32-bit)
+
+ID:          Ubuntu_64
+Description: Ubuntu (64-bit)
+
+ID:          Xandros
+Description: Xandros (32-bit)
+
+ID:          Xandros_64
+Description: Xandros (64-bit)
+
+ID:          Oracle
+Description: Oracle (32-bit)
+
+ID:          Oracle_64
+Description: Oracle (64-bit)
+
+ID:          Linux
+Description: Other Linux (32-bit)
+
+ID:          Linux_64
+Description: Other Linux (64-bit)
+
+ID:          Solaris
+Description: Oracle Solaris 10 5/09 and earlier (32-bit)
+
+ID:          Solaris_64
+Description: Oracle Solaris 10 5/09 and earlier (64-bit)
+
+ID:          OpenSolaris
+Description: Oracle Solaris 10 10/09 and later (32-bit)
+
+ID:          OpenSolaris_64
+Description: Oracle Solaris 10 10/09 and later (64-bit)
+
+ID:          Solaris11_64
+Description: Oracle Solaris 11 (64-bit)
+
+ID:          FreeBSD
+Description: FreeBSD (32-bit)
+
+ID:          FreeBSD_64
+Description: FreeBSD (64-bit)
+
+ID:          OpenBSD
+Description: OpenBSD (32-bit)
+
+ID:          OpenBSD_64
+Description: OpenBSD (64-bit)
+
+ID:          NetBSD
+Description: NetBSD (32-bit)
+
+ID:          NetBSD_64
+Description: NetBSD (64-bit)
+
+ID:          OS2Warp3
+Description: OS/2 Warp 3
+
+ID:          OS2Warp4
+Description: OS/2 Warp 4
+
+ID:          OS2Warp45
+Description: OS/2 Warp 4.5
+
+ID:          OS2eCS
+Description: eComStation
+
+ID:          OS21x
+Description: OS/2 1.x
+
+ID:          OS2
+Description: Other OS/2
+
+ID:          MacOS
+Description: Mac OS X (32-bit)
+
+ID:          MacOS_64
+Description: Mac OS X (64-bit)
+
+ID:          MacOS106
+Description: Mac OS X 10.6 Snow Leopard (32-bit)
+
+ID:          MacOS106_64
+Description: Mac OS X 10.6 Snow Leopard (64-bit)
+
+ID:          MacOS107_64
+Description: Mac OS X 10.7 Lion (64-bit)
+
+ID:          MacOS108_64
+Description: Mac OS X 10.8 Mountain Lion (64-bit)
+
+ID:          MacOS109_64
+Description: Mac OS X 10.9 Mavericks (64-bit)
+
+ID:          MacOS1010_64
+Description: Mac OS X 10.10 Yosemite (64-bit)
+
+ID:          MacOS1011_64
+Description: Mac OS X 10.11 El Capitan (64-bit)
+
+ID:          DOS
+Description: DOS
+
+ID:          Netware
+Description: Netware
+
+ID:          L4
+Description: L4
+
+ID:          QNX
+Description: QNX
+
+ID:          JRockitVE
+Description: JRockitVE
